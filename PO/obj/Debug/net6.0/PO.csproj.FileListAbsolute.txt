@@ -1,0 +1,15 @@
+C:\Revature\RogerS\PO\bin\Debug\net6.0\PO.exe
+C:\Revature\RogerS\PO\bin\Debug\net6.0\PO.deps.json
+C:\Revature\RogerS\PO\bin\Debug\net6.0\PO.runtimeconfig.json
+C:\Revature\RogerS\PO\bin\Debug\net6.0\PO.dll
+C:\Revature\RogerS\PO\bin\Debug\net6.0\PO.pdb
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.csproj.AssemblyReference.cache
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.AssemblyInfoInputs.cache
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.AssemblyInfo.cs
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.csproj.CoreCompileInputs.cache
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.dll
+C:\Revature\RogerS\PO\obj\Debug\net6.0\refint\PO.dll
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.pdb
+C:\Revature\RogerS\PO\obj\Debug\net6.0\PO.genruntimeconfig.cache
+C:\Revature\RogerS\PO\obj\Debug\net6.0\ref\PO.dll
