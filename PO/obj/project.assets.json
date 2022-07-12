@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Revature\\RogerS\\PO\\PO.csproj",
+      "projectUniqueName": "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\PO.csproj",
       "projectName": "PO",
-      "projectPath": "C:\\Revature\\RogerS\\PO\\PO.csproj",
+      "projectPath": "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\PO.csproj",
       "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\RogerS\\PO\\obj\\",
+      "outputPath": "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config"

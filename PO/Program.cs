@@ -1,73 +1,140 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
 
-public class cardholder
-{
-string CardNumber;
-int Pin;
-String FirstName;
-String LastName;
-Double Balance
+public class Cardholder {
+    string CardNumber;
+    int Pin;
+    string FirstName;
+    string LastName;
+    Double Balance;
 
-
-Public cardholder(string CardNumber, Int Pin, String FirstName, String LastName, Double Balance)
-
-string CardNumber;
-this.int = Pin;
-this.String = FirstName;
-this.String = LastName;
-this.Double = Balance
-
-
-public string getNumber();
-Return CardNumber; 
-
-Public int getPIN();
-Return Pin;
-
-Public string getFirstName()
-Return FirstName;
-
-Public String getBalance()
-Return Balance;
-
-
-Public static void Main (String[]args)
-
-void printOptions()
-
-console.WriteLine("Choose from the following printOptions....");
-console.WriteLine("1 Deposit")
-console.WriteLine("2 Withdraw")
-console.WriteLine("3 ShowBalance")
-console.WriteLine("4 Exit")
-
-void deposit (cardholder currentUser)
-console. WriteLine( "How much do you want to deposit?");
-Double deposit = double.parse(console.readline)
-currentUser.setBalance(deposit)
-console.WriteLine( "Thank for your Deposit. Your new balance" + currentUser.getBalance());
-
-void Withdraw (cardholder currentUser)
-console. WriteLine( "How much do you want to deposit?");
-Double Withdraw = double.parse(console.readline)
-currentUser.setBalance(Withdraw)
-console.WriteLine( "Thank for your Deposit. Your new balance" + currentUser.getBalance());
-
-
-
-}
-
-
-using System;
-
-namespace HelloWorld
-{
-  class Program
-  {
-    static void Main(string[] args)
+    public Cardholder(string CardNumber, int Pin, string FirstName, string LastName,Double Balance)
     {
-      Console.WriteLine("Hello World!");    
+        this.CardNumber= CardNumber;
+        this.Pin= Pin;
+        this.FirstName= FirstName;
+        this.LastName= LastName;
+        this.Balance= Balance;
+
     }
-  }
+
+Public string getNum(CardNumber)
+{
+return CardNumber;
+
+    public static void Main()
+    {
+        Console.Write("Hello ");
+        Console.WriteLine("World!");
+        Console.Write("Enter your name: ");
+        string name = Console.ReadLine();
+        Console.Write("Good day, ");
+        Console.Write(name);
+        Console.WriteLine("!");
+    }
 }
+
+Public string getNum(Pin)
+{
+return Pin;
+}
+
+Public string getNum(FirstName)
+{
+return FirstName;
+}
+
+Public string getNum(LastName)
+{
+return LastName;
+}
+
+Public string getNum(Double)
+{
+return Double;
+}
+
+Public string getNum(CardNumber)
+{
+return CardNumber;
+
+    
+}
+
+Public string setNum(Pin)
+{
+return newPin;
+}
+
+Public string setNum(FirstName)
+{
+return newFirstName;
+}
+
+Public string setNum(LastName)
+{
+return newLastName;
+}
+
+Public string setNum(Double)
+{
+return newDouble;
+}
+
+
+
+    public static void Main()
+    {
+        void printOptions
+        {
+         Console.Write("Please choose from the following options");
+        Console.WriteLine("1 Deposit");
+        Console.Write("2 Withdraw ");
+        Console.Write("show balance ");
+        Console.Write("exit");
+        // line 80//
+    }
+
+     void Deposit( Cardholder CurrentUser)
+    
+     {   
+     console.WriteLine("How much money would you like to deposit?");
+     double deposit = Double.Parse(Console.ReadLine());
+     console.WriteLine("Thank you for banking with us.Your new balance" + CurrentUser)
+
+    }
+
+    void Withdraw( Cardholder CurrentUser)
+
+    {
+console.WriteLine("How much money would you like to withdraw");
+     double Withdraw = Double.Parse(Console.ReadLine());
+     if(CurrentUser.GetBalance()>withdraw)
+     {
+        Console.WriteLine("Insufficent funds;(") ;
+
+     }
+    
+
+    
+else
+{
+    CurrentUser.setBalance(CurrentUser.GetBalance()-withdraw);
+     console.WriteLine("Thank you for banking with us.Your new balance" + CurrentUser);
+     
+
+}
+
+
+
+
+
+
+
+
+    
+    
+        
+
+
+   
+    }
