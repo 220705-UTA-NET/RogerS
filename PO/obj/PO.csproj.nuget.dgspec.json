@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\PO.csproj": {}
+    "C:\\Revature\\mentor\\RogerS\\PO\\PO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\PO.csproj": {
+    "C:\\Revature\\mentor\\RogerS\\PO\\PO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\PO.csproj",
+        "projectUniqueName": "C:\\Revature\\mentor\\RogerS\\PO\\PO.csproj",
         "projectName": "PO",
-        "projectPath": "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\PO.csproj",
-        "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\student\\Desktop\\Revature\\RogerS\\PO\\obj\\",
+        "projectPath": "C:\\Revature\\mentor\\RogerS\\PO\\PO.csproj",
+        "packagesPath": "C:\\Users\\Lance Gong\\.nuget\\packages\\",
+        "outputPath": "C:\\Revature\\mentor\\RogerS\\PO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lance Gong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

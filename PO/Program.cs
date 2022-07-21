@@ -3,43 +3,62 @@ using System;
 
 namespace RogerAtm
 {
-    
-
-
     public class Program
     {
+        private static List<CardHolder> cardholderList = new List<CardHolder>();
 
-        static void Deposit(CardHolder CurrentUser)
-        {
-            Console.WriteLine("How much money would you like to deposit?");
-            double deposit = Double.Parse(Console.ReadLine());// 20.53 --> string --> double
-            double currentBalance = CurrentUser.getBalance(); // get current balance of current  user
-            double updatedBalance = currentBalance + deposit;
-            CurrentUser.setBalance(updatedBalance);
-            Console.WriteLine("Thank you " + CurrentUser.getFirstName() + " for banking with us.Your new balance: " + CurrentUser.getBalance());
-        }// end of deposit method
+        //Helper Methods DONT DO ANYTHING ON THEIR OWN. THEY MUST BE CALLED
+        private static string getInput(string prompt){
+            Console.WriteLine("Enter the " + prompt + " of your User");
+            string? input = Console.ReadLine();
+            return input;
+        }
 
-        static void Withdraw(CardHolder CurrentUser)
-        {
-            Console.WriteLine("How much money would you like to withdraw");
-            double Withdraw = Double.Parse(Console.ReadLine());
-            if (CurrentUser.getBalance() < Withdraw)
-            {
-                Console.WriteLine("Insufficent funds;(");
+        private static void insertCH(){
+            Console.Clear();
+            string FirstName = getInput("First Name");
+            string LastName = getInput("Last Name");
+            string Username = getInput("Username");
+            int cardNumber = int.Parse(getInput("Card Number"));
+            int pin = int.Parse(getInput("Pin"));
+            int balance = int.Parse(getInput("Balance"));
 
-            }
-            else
-            {
-                CurrentUser.setBalance(CurrentUser.getBalance() - Withdraw);
-                Console.WriteLine("Thank you "+ CurrentUser.getFirstName() +"for banking with us.Your new balance: " + CurrentUser.getBalance());
-            }
-        }// end of withdraw method
+            CardHolder ch = new CardHolder(cardNumber, pin, Username, FirstName, LastName, balance);
+            cardholderList.Add(ch);
 
-
+        }
 
         public static void Main()
         {
-            try
+            insertCH();
+            CardHolder ch1 = new CardHolder(45678456, 1234, "jwong", "Jimmy", "Wong", 123456);
+            cardholderList.Add(ch1);
+            CardHolder ch2 = new CardHolder(56785768, 2345, "dxie", "Derick", "Xie", 23434);
+            cardholderList.Add(ch2);
+            CardHolder ch3 = new CardHolder(98457893, 3456, "aacalosa", "Annie", "Arayon-Calosa", 2345);
+            cardholderList.Add(ch3);
+            //Person previously created an account
+            //access his information if his pin is correct
+            Console.Clear();
+            /*foreach(CardHolder c in cardholderList){
+                c.returnAccDetails();
+            }*/
+
+
+            string login = getInput("Login");
+            bool accountFound = false;
+
+            foreach(CardHolder c in cardholderList){
+                if(login.Equals(c.Username)){
+                    c.returnAccDetails();
+                    accountFound = true;
+                }
+            }
+            if(!accountFound){
+                Console.WriteLine("Your account does not exist!");
+            }
+
+            /*try
             {
                 //start of main method
                 List<CardHolder> cardHolders = new List<CardHolder>();
@@ -106,7 +125,38 @@ namespace RogerAtm
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+            }*/
+
+        /*
+        static void Deposit(CardHolder CurrentUser)
+        {
+            Console.WriteLine("How much money would you like to deposit?");
+            double deposit = Double.Parse(Console.ReadLine());// 20.53 --> string --> double
+            double currentBalance = CurrentUser.getBalance(); // get current balance of current  user
+            double updatedBalance = currentBalance + deposit;
+            CurrentUser.setBalance(updatedBalance);
+            Console.WriteLine("Thank you " + CurrentUser.getFirstName() + " for banking with us.Your new balance: " + CurrentUser.getBalance());
+        }// end of deposit method
+
+        static void Withdraw(CardHolder CurrentUser)
+        {
+            Console.WriteLine("How much money would you like to withdraw");
+            double Withdraw = Double.Parse(Console.ReadLine());
+            if (CurrentUser.getBalance() < Withdraw)
+            {
+                Console.WriteLine("Insufficent funds;(");
+
             }
+            else
+            {
+                CurrentUser.setBalance(CurrentUser.getBalance() - Withdraw);
+                Console.WriteLine("Thank you "+ CurrentUser.getFirstName() +"for banking with us.Your new balance: " + CurrentUser.getBalance());
+            }
+        }// end of withdraw method
+        */
+
+        //int1: 3 int2:5
+        //calculate returns 3*5 + 3*4 + 3*3 + 3*2 + 3*1 = 15+12+9+6+3 = 45
         }
     } // end of Cardholder class. 
 }
