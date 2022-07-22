@@ -5,7 +5,20 @@ namespace RogerAtm
 {
     public class Program
     {
+        //Is temporary. You will replace this with your DB
         private static List<CardHolder> cardholderList = new List<CardHolder>();
+
+        /*
+        Structure of a METHOD:
+
+        [access level] [static/dynamic modifier] [return modifier] function_name (parameters){
+            content
+            - access level: public, private, protected, internal
+            - static/dynamic typing: is either static / "" (nothing)
+            - return modifiers: var_type (requires you to return the associated variable with the correct type) or void (void means there is no return type)
+
+        }
+        */
 
         //Helper Methods DONT DO ANYTHING ON THEIR OWN. THEY MUST BE CALLED
         private static string getInput(string prompt){
@@ -28,6 +41,7 @@ namespace RogerAtm
 
         }
 
+        //Main method is the default method called when we run the program ("dotnet run")
         public static void Main()
         {
             insertCH();
@@ -49,14 +63,22 @@ namespace RogerAtm
             bool accountFound = false;
 
             foreach(CardHolder c in cardholderList){
-                if(login.Equals(c.Username)){
+                //if(login.Equals(c.Username)){
                     c.returnAccDetails();
                     accountFound = true;
-                }
+                //}
             }
             if(!accountFound){
                 Console.WriteLine("Your account does not exist!");
             }
+
+            /*After we login, we want to CREATE A MENU WITH MENU OPTIONS for the user we logged into, and allow the user to make any changes
+                - Deposit
+                - Withdraw
+                - Check Balance
+                - Sign Out // for the Sign Out, see if you can sign out, return to menu, and then sign in to a new account.
+            */
+        
 
             /*try
             {

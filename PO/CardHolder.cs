@@ -8,6 +8,7 @@ namespace RogerAtm
         public string FirstName{ get; set;}
         public string LastName{ get; set;}
         public double Balance{get; set;}
+        static int id = 1; int myID;
 
         public CardHolder(){}
         
@@ -19,14 +20,23 @@ namespace RogerAtm
             this.FirstName = FirstName; //rogr
             this.LastName = LastName;//xyz
             this.Balance = Balance; //0
+            this.myID = id; id++;
         }
 
         public void returnAccDetails(){ //toString() << usually handled by a Serializer (XML or JSON)
-            Console.WriteLine(  "\nCard Number: " + this.CardNumber +
+            Console.WriteLine(  "\nID: " + this.myID +
+                                "\nCard Number: " + this.CardNumber +
                                 "\nUsername: " + this.Username +
                                 "\nName: " + this.FirstName + " " + this.LastName +
                                 "\nBalance: " + this.Balance);
         }
+
+        //implement deposit
+        public void deposit(int amount){}
+
+        //implement withdraw
+        public void withdraw(int amount){}
+
 
         // private setter
         // public void setPin(){}
