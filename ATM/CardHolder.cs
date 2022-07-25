@@ -111,6 +111,21 @@ namespace ATM
             }
             Console.WriteLine("No user " + user + " found");
         }
+        public void sendMoney(CardHolder cardHolder, double amount)
+        {                    
+            if(amount > this.Balance)
+            {
+                Console.WriteLine("Insufficent Funds, Try Again");
+                checkRequests();
+            }
+            else
+            {
+                cardHolder.Balance += amount;
+                this.Balance -= amount;
+                Console.WriteLine("Sent " + cardHolder.Username + " $" + amount);
+                return;
+            }
+        }
 
         public void requestMoney()
         {
@@ -124,11 +139,35 @@ namespace ATM
                     //how much
                     Console.WriteLine("How much money to request?");
                     double amount = double.Parse(Console.ReadLine());
-                    Request request = new Request(this, cardHolder, amount);
+                    Request request = new Request(this, amount);
+                    cardHolder.RequestList.Add(request);
                     return;
                 }
             }
             Console.WriteLine("No user " + user + " found");
+        }
+
+        public void checkRequests()
+        {
+            int i = 1;
+            foreach (Request request in RequestList)
+            {
+                Console.WriteLine( i + ". " + request.listRequest());
+                i++;
+            }
+
+            Console.Write("Enter Request: ");
+            int input = int.Parse(Console.ReadLine());
+            if(input < RequestList.Count())
+            {
+                Request RequestToPay = RequestList.ElementAt(input - 1);
+                this.sendMoney(RequestToPay.requester, RequestToPay.amount);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Request");
+            }
+            
         }
     }
 }

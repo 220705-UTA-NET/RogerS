@@ -2,14 +2,17 @@ namespace ATM
 {
     public class Request
     {
-        CardHolder requester;
-        CardHolder requestee;
-        double amount;
-        public Request(CardHolder requester, CardHolder requestee, double amount)
+        public CardHolder requester {get;}
+        public double amount {get;}
+        public Request(CardHolder requester, double amount)
         {
             this.requester = requester;
-            this.requestee = requestee;
             this.amount = amount;
+        }
+
+        public string listRequest()
+        {
+            return this.requester + " requested $" + amount + "\n";
         }
     }
 }
