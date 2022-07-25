@@ -80,11 +80,11 @@
                                 "1. Deposit\n" + 
                                 "2. Withdraw\n" + 
                                 "3. Check Balance\n" + 
-                                //"4. Log Out" +
-                                "4. Send Money\n" + 
+                                "4. Log Out"
+                                /*"4. Send Money\n" + 
                                 "5. Request Money\n" + 
                                 "6. Check Requests\n" +
-                                "7. Log Out");
+                                "7. Log Out"*/);
             string input = Console.ReadLine();
             switch(input)
             {
@@ -100,7 +100,7 @@
                     LoggedInUser.checkBalance();
                     accountMenu(LoggedInUser);
                     break;
-                case "4":
+                /*case "4":
                     LoggedInUser.sendMoney();
                     accountMenu(LoggedInUser);
                     break;
@@ -113,6 +113,9 @@
                     accountMenu(LoggedInUser);
                     break;
                 case "7":
+                    loginMenu();
+                    break;*/
+                case "4":
                     loginMenu();
                     break;
                 default:
