@@ -31,6 +31,7 @@ namespace ATM
             this.Username = Username;
             this.Pin = Pin;
             this.Balance = 0;
+            RequestList = new List<Request>();
             //Console.WriteLine("Created new CardHolder: " + this.FirstName + " " + this.LastName + " with ID: " + this.cardHolderID);
         }
 
@@ -158,7 +159,7 @@ namespace ATM
 
             Console.Write("Enter Request: ");
             int input = int.Parse(Console.ReadLine());
-            if(input < RequestList.Count())
+            if(input <= RequestList.Count())
             {
                 Request RequestToPay = RequestList.ElementAt(input - 1);
                 this.sendMoney(RequestToPay.requester, RequestToPay.amount);

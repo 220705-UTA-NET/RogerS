@@ -12,7 +12,7 @@ namespace ATM
 
         public string listRequest()
         {
-            return this.requester + " requested $" + amount + "\n";
+            return this.requester.Username + " requested $" + amount + "\n";
         }
     }
 }
